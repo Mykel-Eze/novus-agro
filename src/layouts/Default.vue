@@ -2,7 +2,7 @@
     <div id="nav">
         <NavbarComponent/>
         <div id="main-contents-wrapper">
-            <router-view />
+            <RouterView />
         </div>
 
         <NewsletterBlock />

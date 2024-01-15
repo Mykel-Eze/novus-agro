@@ -5,7 +5,8 @@
             <div class="container full-height">
                 <div class="nav-wrapper">
                     <router-link to="/" class="brand-logo" @click="scrollToTop()">
-                        <img src="@/assets/images/novus-agro.png" alt="novus-agro" class="logo">
+                        <img src="@/assets/images/novus-agro.png" alt="novus-agro" class="logo colored-img">
+                        <img src="@/assets/images/novus-agro-white.png" alt="novus-agro" class="logo white-img">
                     </router-link>
 
                     <ul id="nav-mobile-2" class="dn-mobile ul-nav">

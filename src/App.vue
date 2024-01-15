@@ -17,13 +17,13 @@ div#nav {
 }
 
 div#main-contents-wrapper {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   min-height: 60vh;
 }
 
 @media(max-width: 600px) {
-  div#main-contents-wrapper {
+  /* div#main-contents-wrapper {
     padding-top: 70px;
-  }
+  } */
 }
 </style>
