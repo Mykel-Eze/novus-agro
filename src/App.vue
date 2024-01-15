@@ -17,8 +17,8 @@ div#nav {
 }
 
 div#main-contents-wrapper {
-  padding-top: 90px;
-  /* min-height: 100vh; */
+  padding-top: 80px;
+  min-height: 60vh;
 }
 
 @media(max-width: 600px) {

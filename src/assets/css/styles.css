@@ -1,11 +1,16 @@
 :root {
-    --pry-color: #1E50D1;
-    --sec-color: #F7AD18;
-    --font: 'MTNBrighterSans', sans-serif;
-    --font-bold: 'MTNBrighterSans-Bold', sans-serif;
-    --font-medium: 'MTNBrighterSans-Medium', sans-serif;
-    --font-light: 'MTNBrighterSans-Light', sans-serif;
-    --font-xbold: 'MTNBrighterSans-xBold', sans-serif;
+    --pry-color: #056839;
+    --sec-color: #606060;
+    --lite-color: #d9e7dd;
+    --font: 'Moderat', sans-serif;
+    --font-bold: 'Moderat-Bold', sans-serif;
+    --font-medium: 'Moderat-Medium', sans-serif;
+    --font-thin: 'Moderat-Thin', sans-serif;
+
+    --font-2: 'Moderat', sans-serif;
+    --font-2-bold: 'Moderat-Bold', sans-serif;
+    --font-2-medium: 'Moderat-Medium', sans-serif;
+    --font-2-thin: 'Moderat-Thin', sans-serif;
 
     width: 100%;
     overflow-x: hidden;
@@ -25,12 +30,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(30, 80, 209, 0.9);
+    background: rgba(5, 104, 57, 0.9);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(30, 80, 209, 0.4);
+    background: rgba(5, 104, 57, 0.4);
 }
 
 .__nuxt-error-page {
@@ -60,7 +65,7 @@ h4 {
 
 h5,
 h6 {
-    font-family: var(--font-light);
+    font-family: var(--font);
     letter-spacing: -1px;
 }
 
@@ -99,7 +104,9 @@ h6 {
 .light-txt {
     font-family: var(--font-light);
 }
-
+.thin-txt {
+    font-family: var(--font-thin);
+}
 /* .xlight-txt{
     font-family: var(--font-xlite);
 } */
@@ -134,7 +141,7 @@ h6 {
 
 .sec-bg {
     background-color: var(--sec-color);
-    color: #161616;
+    color: #fff;
 }
 
 .white-bg {
