@@ -6,7 +6,7 @@
                 <h2 class="section-title center">What We Do</h2>
 
                 <div class="wwd-block-wrapper">
-                    <div class="wwd-block">
+                    <div class="wwd-block" data-aos="zoom-in-up" data-aos-delay="100">
                         <img src="@/assets/images/farmer.png" alt="farmers" class="wwd-img">
                         <div class="wwd-block-title">Organizing Farmers</div>
                         <div class="wwd-block-desc">
@@ -14,7 +14,7 @@
                             between them and other stakeholders.
                         </div>
                     </div>
-                    <div class="wwd-block">
+                    <div class="wwd-block" data-aos="zoom-in-up" data-aos-delay="300">
                         <img src="@/assets/images/knowledge-sharing.png" alt="knowledge-sharing" class="wwd-img">
                         <div class="wwd-block-title">Knowledge Support</div>
                         <div class="wwd-block-desc">
@@ -22,14 +22,14 @@
                             a reference knowledge base.
                         </div>
                     </div>
-                    <div class="wwd-block">
+                    <div class="wwd-block" data-aos="zoom-in-up" data-aos-delay="500">
                         <img src="@/assets/images/seeding.png" alt="seeding" class="wwd-img">
                         <div class="wwd-block-title">Facilitating Inputs</div>
                         <div class="wwd-block-desc">
                             Identifies value chain specific best input for your planting program.
                         </div>
                     </div>
-                    <div class="wwd-block">
+                    <div class="wwd-block" data-aos="zoom-in-up" data-aos-delay="700">
                         <img src="@/assets/images/credit.png" alt="credit" class="wwd-img">
                         <div class="wwd-block-title">Facilitating Credit</div>
                         <div class="wwd-block-desc">

@@ -10,23 +10,23 @@
                 </p>
             </div>
             <div class="ca-block-wrapper">
-                <div class="ca-block">
-                    <h2 class="ca-number">1,000</h2>
+                <div class="ca-block" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="ca-number">1000</h2>
                     <div class="ca-block-title">Farmers</div>
                 </div>
-                <div class="ca-block">
+                <div class="ca-block" data-aos="fade-up" data-aos-delay="300">
                     <h2 class="ca-number">700</h2>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
-                <div class="ca-block">
+                <div class="ca-block" data-aos="fade-up" data-aos-delay="500">
                     <h2 class="ca-number">100</h2>
                     <div class="ca-block-title">Hectares Planted</div>
                 </div>
-                <div class="ca-block">
+                <div class="ca-block" data-aos="fade-up" data-aos-delay="700">
                     <h2 class="ca-number">04</h2>
                     <div class="ca-block-title">States</div>
                 </div>
-                <div class="ca-block">
+                <div class="ca-block" data-aos="fade-up" data-aos-delay="900">
                     <h2 class="ca-number">120</h2>
                     <div class="ca-block-title">Grainpoint Hubs</div>
                 </div>
@@ -37,28 +37,28 @@
 </template>
 
 <script>
-// import { CountUp } from 'countup.js';
+import { CountUp } from 'countup.js';
 
 export default {
     name: 'CommodityAggregationSection',
     components: {},
-    // mounted() {
-    //     this.animateNumbers();
-    // },
-    // methods: {
-    //     animateNumbers() {
-    //         const elements = document.querySelectorAll('.ca-number');
-    //         elements.forEach((element) => {
-    //             const endValue = parseInt(element.innerText, 10);
-    //             const countUp = new CountUp(element, endValue);
-    //             if (!countUp.error) {
-    //                 countUp.start();
-    //             } else {
-    //                 console.error(countUp.error);
-    //             }
-    //         });
-    //     }
-    // }
+    mounted() {
+        this.animateNumbers();
+    },
+    methods: {
+        animateNumbers() {
+            const elements = document.querySelectorAll('.ca-number');
+            elements.forEach((element) => {
+                const endValue = parseInt(element.innerText, 10);
+                const countUp = new CountUp(element, endValue);
+                if (!countUp.error) {
+                    countUp.start();
+                } else {
+                    console.error(countUp.error);
+                }
+            });
+        }
+    }
 }
 </script>
 

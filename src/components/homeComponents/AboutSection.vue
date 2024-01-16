@@ -3,7 +3,7 @@
     <div class="row relative">
         <div class="container">
             <div class="about-container">
-                <div class="about-txt-side center">
+                <div class="about-txt-side center" data-aos="fade-up">
                     <h2 class="section-title">About Novus Agro</h2>
                     <div class="section-desc-txt">
                         <b class="pry-color">Novus Agro</b> facilitates trade and services between farming
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="about-video-side">
-                    <div class="video-wrapper">
+                    <div class="video-wrapper" data-aos="zoom-up">
                         <iframe width="100%" height="320" src="https://www.youtube-nocookie.com/embed/c7eFjBlWoiQ?si=ZatsemPUN023KQwJ&amp;controls=0" title="About Novus Agro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>

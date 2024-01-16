@@ -17,7 +17,7 @@
     <!---=== end of What-We-Do Section ===--->
 
     <!---=== Farme-Gate-Price Section ===--->
-    <FarmGatePriceSection />
+    <FarmGatePricesSection />
     <!---=== end of Farme-Gate-Price Section ===--->
 
     <!---=== Partners Section ===--->
@@ -31,7 +31,7 @@ import HeroSection from '@/components/homeComponents/HeroSection.vue'
 import AboutSection from '@/components/homeComponents/AboutSection.vue'
 import CommodityAggregationSection from '@/components/homeComponents/CommodityAggregationSection.vue'
 import WhatWeDoSection from '@/components/homeComponents/WhatWeDoSection.vue'
-import FarmGatePriceSection from '@/components/homeComponents/FarmGatePriceSection.vue'
+import FarmGatePricesSection from '@/components/homeComponents/FarmGatePricesSection.vue'
 import PartnersSection from '@/components/homeComponents/PartnersSection.vue'
 
 export default {
@@ -41,7 +41,7 @@ export default {
     AboutSection,
     CommodityAggregationSection,
     WhatWeDoSection,
-    FarmGatePriceSection,
+    FarmGatePricesSection,
     PartnersSection
 },
 }

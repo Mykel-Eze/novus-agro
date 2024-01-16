@@ -1,5 +1,5 @@
 <template>
-  <section id="farm-gate-price" ref="farmGatePriceSection">
+  <section id="farm-gate-prices" ref="farmGatePriceSection">
     <div class="row">
         <div class="container">
             <div class="farm-gate-content-wrapper">
@@ -7,7 +7,7 @@
                 <h4 class="section-sub-title center">
                     By Crop Per Metric Ton <span class="pry-color">(May 19, 2023)</span>
                 </h4>
-                <div class="farm-gate-price-wrapper">
+                <div class="farm-gate-price-wrapper" data-aos="flip-left">
                     <FarmGatePriceBlock
                         extraClass="hibiscus-block"
                         itemName="Hibiscus"
@@ -68,7 +68,7 @@
 import FarmGatePriceBlock from './FarmGatePriceBlock.vue'
 
 export default {
-    name: "FarmGatePriceSection",
+    name: "FarmGatePricesSection",
     components: { 
         FarmGatePriceBlock
     },

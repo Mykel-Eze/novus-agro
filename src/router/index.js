@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 // Layouts
 import DefaultLayout from '@/layouts/Default.vue'
@@ -22,5 +24,10 @@ const router = createRouter({
     },
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  AOS.init(); // Initialize AOS
+  next();
+});
 
 export default router

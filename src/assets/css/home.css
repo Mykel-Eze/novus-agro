@@ -166,12 +166,17 @@ h4.section-sub-title {
 }
 
 @media(max-width: 600px) {
+    section#about {
+        padding: 30px 0 10px;
+        position: relative;
+    }
     h2.section-title.long-title {
         font-size: 28px;
         line-height: 1.5;
     }
     .video-wrapper {
         width: 100%;
+        padding-top: 55%;
     }
 }
 /**** end of About-Section Styles ****/
@@ -238,7 +243,7 @@ section.logo-bg-section::before {
 
 @media(max-width: 600px) {
     .ca-block-wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 100%;
     }
 }
 /**** end of Commodity-Aggregation-Section Styles ****/
@@ -271,7 +276,11 @@ img.wwd-img {
     margin: 24px 0;
 }
 
-@media(max-width: 992px) {}
+@media(max-width: 992px) {
+    .wwd-block-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media(max-width: 600px) {
     .wwd-block-wrapper{
@@ -280,8 +289,8 @@ img.wwd-img {
 }
 /**** end of What-We-Do-Section Styles ****/
 
-/**** Farm-Gate-Price-Section Styles ****/
-section#farm-gate-price {
+/**** Farm-Gate-Prices-Section Styles ****/
+section#farm-gate-prices {
     padding: 80px 0 70px;
     position: relative;
 }
@@ -316,8 +325,22 @@ section#farm-gate-price {
 
 @media(max-width: 992px) {}
 
-@media(max-width: 600px) {}
-/**** end of Farm-Gate-Price-Section Styles ****/
+@media(max-width: 600px) {
+    section#farm-gate-prices {
+        padding: 10px 0 1px;
+    }
+    .farm-gate-price-wrapper {
+        gap: 30px;
+    }
+    .price-block {
+        grid-template-columns: 100%;
+        gap: 10px;
+    }
+    img.item-img {
+        width: 40px;
+    }
+}
+/**** end of Farm-Gate-Prices-Section Styles ****/
 
 /**** Partners-Section Styles ****/
 section#partners {
@@ -343,5 +366,9 @@ section#partners {
 
 @media(max-width: 992px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .partners-block-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 /**** end of Partners-Section Styles ****/
