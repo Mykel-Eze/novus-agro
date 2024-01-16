@@ -7,10 +7,11 @@
     --font-medium: 'Moderat-Medium', sans-serif;
     --font-thin: 'Moderat-Thin', sans-serif;
 
-    --font-2: 'Moderat', sans-serif;
-    --font-2-bold: 'Moderat-Bold', sans-serif;
-    --font-2-medium: 'Moderat-Medium', sans-serif;
-    --font-2-thin: 'Moderat-Thin', sans-serif;
+    --font-2: 'MTNBrighterSans', sans-serif;
+    --font-2-bold: 'MTNBrighterSans-Bold', sans-serif;
+    --font-2-xbold: 'MTNBrighterSans-xBold', sans-serif;
+    --font-2-medium: 'MTNBrighterSans-Medium', sans-serif;
+    --font-2-light: 'MTNBrighterSans-light', sans-serif;
 
     width: 100%;
     overflow-x: hidden;

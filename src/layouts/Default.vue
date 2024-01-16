@@ -4,8 +4,6 @@
         <div id="main-contents-wrapper">
             <RouterView />
         </div>
-
-        <NewsletterBlock />
         <FooterComponent/>
     </div>
 </template>
