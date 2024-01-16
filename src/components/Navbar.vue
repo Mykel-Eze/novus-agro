@@ -222,4 +222,7 @@ export default {
     .sidenav svg path {
         stroke: #1A242D;
     }
+    nav.main-nav:not(.scrolled-nav) .sidenav-trigger svg path {
+        stroke: #fff;
+    }
 </style>
