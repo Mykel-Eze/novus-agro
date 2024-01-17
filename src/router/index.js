@@ -8,6 +8,7 @@ import DefaultLayout from '@/layouts/Default.vue'
 // Pages
 import HomePage from '../views/Home.vue'
 import AboutPage from '../views/About.vue'
+import FaqPage from '../views/Faq.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,11 @@ const router = createRouter({
           path: 'about',
           name: 'About',
           component: AboutPage,
+        },
+        {
+          path: 'faq',
+          name: 'Faq',
+          component: FaqPage,
         },
       ]
     },
