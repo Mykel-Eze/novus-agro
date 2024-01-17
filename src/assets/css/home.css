@@ -143,6 +143,7 @@ h4.section-sub-title {
     width: 75%;
     padding-top: 40%;
     margin: auto;
+    background-color: #121212;
 }
 .video-wrapper iframe {
     position: absolute;

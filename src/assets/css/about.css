@@ -1,0 +1,180 @@
+/**** About-Text-Section Styles ****/
+section#about-texts {
+    padding: 80px 0 70px;
+    position: relative;
+}
+.about-text-wrapper {
+    font-size: 20px;
+    font-family: var(--font-2);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {}
+/**** end of About-Text-Section Styles ****/
+
+/**** Who-We-Are-Section Styles ****/
+section#who-we-are {
+    padding: 80px 0 70px;
+    position: relative;
+}
+.who-we-are-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+.who-we-are-block {
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1.25px solid rgba(0, 102, 245, 0.12);
+    background: #FFF;
+    box-shadow: 0px 15px 26px 12px rgba(4, 30, 139, 0.05);
+    padding: 40px;
+    text-align: center;
+    font-family: var(--font-2);
+}
+.who-we-are-block img.wwa-icon {
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+@media(max-width: 992px) {
+    .who-we-are-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media(max-width: 600px) {
+    section#who-we-are {
+        padding: 30px 0 50px;
+    }
+    .who-we-are-content {
+        grid-template-columns: 100%;
+        gap: 25px;
+    }
+}
+/**** end of Who-We-Are-Section Styles ****/
+
+/**** Mission-And-Vision-Section Styles ****/
+section#mission-and-vision {
+    padding: 80px 0 70px;
+    position: relative;
+}
+.mission-vision-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.mission-vision-txt-side {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 60px 0;
+}
+.mission-vision-block .section-desc-txt {
+    width: 100%;
+    font-size: 20px;
+}
+.mission-vision-img-side {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 300px;
+}
+.mission-vision-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media(max-width: 992px) {
+    .mission-vision-txt-side {
+        gap: 60px;
+        padding: 10px 0 20px;
+    }
+}
+
+@media(max-width: 600px) {
+    .mission-vision-txt-side {
+        gap: 50px;
+        padding: 0;
+    }
+    .mission-vision-wrapper {
+        grid-template-columns: 100%;
+        gap: 60px;
+    }
+}
+/**** end of Mission-And-Vision-Section Styles ****/
+
+/**** Positioning-Statement-Section Styles ****/
+section#positioning-statement {
+    padding: 80px 0 70px;
+    position: relative;
+}
+.positioning-statement-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.positioning-statement-txt-side {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.positioning-statement-img-side {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 300px;
+}
+.positioning-statement-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+ul.positioning-statement-list {
+    font-size: 20px;
+    padding-left: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font-2);
+    font-weight: normal;
+}
+ul.positioning-statement-list li {
+    list-style-type: disc !important;
+    line-height: 1.3;
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {
+    section#positioning-statement {
+        padding: 20px 0 50px;
+    }
+    .positioning-statement-wrapper {
+        grid-template-columns: 100%;
+        gap: 40px;
+    }
+    .positioning-statement-img-side {
+        order: -1;
+    }
+}
+/**** end of Positioning-Statement-Section Styles ****/
