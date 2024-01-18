@@ -3,7 +3,7 @@
     <!---=== Header Section ===--->
     <TopHeader
       title="Our Team"
-      description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+      description="Our team is made up of individuals with a wealth of experience and first-class expertise in their various fields"
       backgroundImg="team-banner.jpg"
     />
     <!---=== end of Header Section ===--->
