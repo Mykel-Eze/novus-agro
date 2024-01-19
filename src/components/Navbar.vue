@@ -48,7 +48,7 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/career" @click="scrollToTop()">
+                            <router-link to="/careers" @click="scrollToTop()">
                                 <span>Careers</span>
                             </router-link>
                         </li>
@@ -121,7 +121,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/career" class="sidenav-close" @click="scrollToTop()">
+                    <router-link to="/careers" class="sidenav-close" @click="scrollToTop()">
                         <span>Careers</span>
                     </router-link>
                 </li>
