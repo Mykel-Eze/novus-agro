@@ -74,33 +74,6 @@
         <div class="modal-content">
             <div class="member-modal-wrapper">
                 <div class="member-img-side">
-                    <img src="@/assets/images/team-member-3.jpg" alt="team-img" class="member-img">
-                </div>
-
-                <div class="member-txt-side">
-                    <div class="container">
-                        <div class="member-role">Head of Operations</div>
-                        <div class="member-name">Justin Justus Iorvee </div>
-                        <div class="member-desc">
-                            <p>
-                                Justus started his Working career in 2015 where he co-founded Scout-Hub, a
-                                technology driven startup, before founding his start-up, had worked in the
-                                hospitality industry performing supervisory roles for more than four years, during
-                                which he built a profound customer service experience and management. In 2019
-                                he started his  journey  with  Novus Agro as part of the operations team
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="team-member-4" class="modal team-modal">
-        <img src="@/assets/images/close.svg" alt="close" class="modal-close">
-        <div class="modal-content">
-            <div class="member-modal-wrapper">
-                <div class="member-img-side">
                     <img src="@/assets/images/team-member-4.jpg" alt="team-img" class="member-img">
                 </div>
 
@@ -121,7 +94,7 @@
         </div>
     </div>
 
-    <div id="team-member-5" class="modal team-modal">
+    <div id="team-member-4" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
         <div class="modal-content">
             <div class="member-modal-wrapper">

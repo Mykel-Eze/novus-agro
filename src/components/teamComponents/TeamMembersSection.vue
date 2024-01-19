@@ -25,20 +25,12 @@
                     <img src="@/assets/images/team-member-3.jpg" alt="team-member" class="team-member-picture">
 
                     <div class="team-member-details">
-                        <div class="team-member-name">Justin Justus Iorvee </div>
-                        <div class="team-member-role">Head of Operations</div>
-                    </div>
-                </div>
-                <div class="team-members-block modal-trigger" data-target="team-member-4" data-aos="fade-up">
-                    <img src="@/assets/images/team-member-4.jpg" alt="team-member" class="team-member-picture">
-
-                    <div class="team-member-details">
                         <div class="team-member-name">Olajide Temitope</div>
                         <div class="team-member-role">Opportunities and Business Development</div>
                     </div>
                 </div>
 
-                <div class="team-members-block modal-trigger" data-target="team-member-5" data-aos="fade-up">
+                <div class="team-members-block modal-trigger" data-target="team-member-4" data-aos="fade-up">
                     <img src="@/assets/images/team-member-4.jpg" alt="team-member" class="team-member-picture">
 
                     <div class="team-member-details">
