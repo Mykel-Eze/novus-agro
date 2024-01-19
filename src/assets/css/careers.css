@@ -1,0 +1,21 @@
+section#careers-section {
+    padding: 80px 0 70px;
+    position: relative;
+}
+img.careers-img {
+    width: 80%;
+    margin: 60px auto 0;
+    border-radius: 50px;
+}
+section#careers-section .section-desc-txt {
+    font-size: 20px;
+}
+
+@media (max-width: 992px) {
+    img.careers-img {
+        width: 100%;
+    }
+    section#careers-section .section-desc-txt {
+        font-size: 18px;
+    }
+}

@@ -9,24 +9,24 @@
                     facilitate the sale of commodity at <a href="#farm-gate-prices" class="text-link">farm gate prices</a>.
                 </p>
             </div>
-            <div class="ca-block-wrapper">
-                <div class="ca-block" data-aos="fade-up" data-aos-delay="100">
+            <div class="ca-block-wrapper" data-aos="fade-up">
+                <div class="ca-block">
                     <h2 class="ca-number">1000</h2>
                     <div class="ca-block-title">Farmers</div>
                 </div>
-                <div class="ca-block" data-aos="fade-up" data-aos-delay="300">
+                <div class="ca-block">
                     <h2 class="ca-number">700</h2>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
-                <div class="ca-block" data-aos="fade-up" data-aos-delay="500">
+                <div class="ca-block">
                     <h2 class="ca-number">100</h2>
                     <div class="ca-block-title">Hectares Planted</div>
                 </div>
-                <div class="ca-block" data-aos="fade-up" data-aos-delay="700">
+                <div class="ca-block">
                     <h2 class="ca-number">04</h2>
                     <div class="ca-block-title">States</div>
                 </div>
-                <div class="ca-block" data-aos="fade-up" data-aos-delay="900">
+                <div class="ca-block">
                     <h2 class="ca-number">120</h2>
                     <div class="ca-block-title">Grainpoint Hubs</div>
                 </div>
@@ -37,26 +37,39 @@
 </template>
 
 <script>
-import { CountUp } from 'countup.js';
+import $ from "jquery"
 
 export default {
     name: 'CommodityAggregationSection',
     components: {},
     mounted() {
-        this.animateNumbers();
+        this.observeSection();
     },
     methods: {
         animateNumbers() {
-            const elements = document.querySelectorAll('.ca-number');
-            elements.forEach((element) => {
-                const endValue = parseInt(element.innerText, 10);
-                const countUp = new CountUp(element, endValue);
-                if (!countUp.error) {
-                    countUp.start();
-                } else {
-                    console.error(countUp.error);
-                }
+            $('.ca-number').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now).toLocaleString('en-US'));
+                    }
+                });
             });
+        },
+        observeSection() {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.animateNumbers();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            observer.observe(document.querySelector('#commodity-aggregation'));
         }
     }
 }
