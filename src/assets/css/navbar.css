@@ -5,7 +5,7 @@ nav.main-nav {
     width: 100%;
     box-shadow: none;
     height: 80px;
-    z-index: 10;
+    z-index: 2006;
     font-family: var(--font);
     font-weight: bold;
     top: 0;
@@ -171,6 +171,9 @@ nav .brand-logo {
     position: relative;
 }
 
+.sidenav {
+    z-index: 2010;
+}
 .sidenav-footer {
     position: absolute;
     bottom: 80px;

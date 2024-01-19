@@ -10,6 +10,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.38",
+    "@amcharts/amcharts4-geodata": "^4.1.28",
     "aos": "^2.3.4",
     "countup.js": "^2.8.0",
     "jquery": "^3.7.1",

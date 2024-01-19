@@ -10,6 +10,7 @@ import HomePage from '../views/Home.vue'
 import AboutPage from '../views/About.vue'
 import FaqPage from '../views/Faq.vue'
 import TeamPage from '../views/Team.vue'
+import ServicesPage from '../views/Services.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,11 @@ const router = createRouter({
           path: 'team',
           name: 'Team',
           component: TeamPage,
+        },
+        {
+          path: 'services',
+          name: 'Services',
+          component: ServicesPage,
         },
       ]
     },
