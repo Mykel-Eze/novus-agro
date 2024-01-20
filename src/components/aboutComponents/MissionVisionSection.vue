@@ -4,7 +4,7 @@
         <div class="container">
           <div class="mission-vision-wrapper">
             <div class="mission-vision-img-side" data-aos="fade-left">
-              <img src="@/assets/images/mission-vision.jpeg" alt="mission-vision" class="mission-vision-img">
+              <img src="@/assets/images/harvesting-farmer.jpg" alt="harvesting-farmer" class="mission-vision-img">
             </div>
             <div class="mission-vision-txt-side" data-aos="fade-right">
               <div class="mission-vision-block">
