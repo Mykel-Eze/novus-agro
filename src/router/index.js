@@ -13,6 +13,8 @@ import TeamPage from '../views/Team.vue'
 import ServicesPage from '../views/Services.vue'
 import ContactPage from '../views/Contact.vue'
 import CareersPage from '../views/Careers.vue'
+import BlogPage from '../views/blog/Index.vue'
+import BlogPostPage from '../views/blog/BlogPost.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -55,6 +57,16 @@ const router = createRouter({
           path: 'careers',
           name: 'Careers',
           component: CareersPage,
+        },
+        {
+          path: 'blog',
+          name: 'Blog',
+          component: BlogPage,
+        },
+        {
+          path: 'blog-post',
+          name: 'BlogPost',
+          component: BlogPostPage,
         },
       ]
     },
