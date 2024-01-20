@@ -30,7 +30,7 @@ export default {
         },
         blogLink: {
             type: String,
-            default: '/blog-post',
+            default: '/blog/post',
             required: true,
         },
     },

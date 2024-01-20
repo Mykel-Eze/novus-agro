@@ -15,6 +15,7 @@ import ContactPage from '../views/Contact.vue'
 import CareersPage from '../views/Careers.vue'
 import BlogPage from '../views/blog/Index.vue'
 import BlogPostPage from '../views/blog/BlogPost.vue'
+import GalleryPage from '../views/Gallery.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,9 +65,14 @@ const router = createRouter({
           component: BlogPage,
         },
         {
-          path: 'blog-post',
+          path: 'blog/post',
           name: 'BlogPost',
           component: BlogPostPage,
+        },
+        {
+          path: 'gallery',
+          name: 'Gallery',
+          component: GalleryPage,
         },
       ]
     },

@@ -1,0 +1,103 @@
+/**** Gallery-Section Styles ****/
+section#gallery {
+    padding: 70px 0;
+    position: relative;
+}
+.gallery-tab-wrapper .tabs .tab a {
+    color: #121212;
+    font-family: var(--font-2-bold);
+    font-size: 16px;
+    text-transform: none;
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+}
+.gallery-tab-wrapper .tabs .tab a:hover {
+    color: gray;
+}
+.gallery-tab-wrapper .tabs .tab a.active {
+    color: white !important;
+}
+.gallery-tab-wrapper .tabs .indicator {
+    background-color: var(--pry-color);
+    height: 100%;
+    border-radius: 4px;
+}
+.gallery-photos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.gallery-photos-block {
+    height: 200px;
+    border-radius: 12px;
+    background: lightgray;
+    box-shadow: 0px 15px 26px 12px rgba(4, 30, 139, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+.gallery-photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#materialbox-overlay {
+    z-index: 2010 !important;
+}
+.materialboxed.active {
+    z-index: 2011 !important;
+}
+
+
+@media(max-width: 992px) {
+    .gallery-photos-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .gallery-photos-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .material-placeholder {
+        height: 100%;
+    }
+}
+/**** end of Gallery-Section Styles ****/
+
+/**** Gallery-Video-Modal Styles ****/
+#videoModal.modal {
+    background-color: transparent;
+    height: calc(80% - 100px);
+    z-index: 2012 !important;
+    overflow-y: visible;
+}
+.modal-overlay {
+    z-index: 2010 !important;
+}
+#videoModal .modal-content {
+    padding: 0;
+    /* border-radius: 12px; */
+    overflow: hidden;
+    height: 100%;
+    background-color: gray;
+}
+#videoModal img.modal-close {
+    position: absolute;
+    right: 0;
+    background: white;
+    top: -53px;
+}
+iframe#videoPlayer {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 600px) {
+    #videoModal.modal {
+        max-height: 450px;
+    }
+}
+/**** end of Gallery-Video-Modal Styles ****/

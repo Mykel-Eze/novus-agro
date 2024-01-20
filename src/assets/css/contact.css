@@ -202,7 +202,7 @@ a.cds-info-link:hover {
         background-color: var(--pry-color) !important;
     }
 
-    .tabs .indicator {
+    .contact-content-wrapper .tabs .indicator {
         display: none;
     }
 }
