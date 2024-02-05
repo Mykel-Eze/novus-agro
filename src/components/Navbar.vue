@@ -48,6 +48,11 @@
                             </router-link>
                         </li>
                         <li>
+                            <router-link to="/grainpoint" @click="scrollToTop()">
+                                <span>GrainPoint</span>
+                            </router-link>
+                        </li>
+                        <li>
                             <router-link to="/careers" @click="scrollToTop()">
                                 <span>Careers</span>
                             </router-link>
@@ -118,6 +123,11 @@
                 <li>
                     <router-link to="/services" class="sidenav-close" @click="scrollToTop()">
                         <span>Our Services</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/grainpoint" class="sidenav-close" @click="scrollToTop()">
+                        <span>GrainPoint</span>
                     </router-link>
                 </li>
                 <li>

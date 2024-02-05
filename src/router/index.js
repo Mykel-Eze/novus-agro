@@ -16,6 +16,7 @@ import CareersPage from '../views/Careers.vue'
 import BlogPage from '../views/blog/Index.vue'
 import BlogPostPage from '../views/blog/BlogPost.vue'
 import GalleryPage from '../views/Gallery.vue'
+import GrainpointPage from '../views/Grainpoint.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -73,6 +74,11 @@ const router = createRouter({
           path: 'gallery',
           name: 'Gallery',
           component: GalleryPage,
+        },
+        {
+          path: 'grainpoint',
+          name: 'Grainpoint',
+          component: GrainpointPage,
         },
       ]
     },

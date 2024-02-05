@@ -1,0 +1,132 @@
+/**** Overview-Section Styles ****/
+section#grainpoint-overview {
+    padding: 80px 0;
+}
+.grainpoint-overview-wrapper.section-desc-txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    /* font-family: var(--font-thin); */
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {}
+/**** end of Overview-Section Styles ****/
+
+/**** GradePoint-Impact-Section Styles ****/
+section#grainpoint-impact {
+    padding: 80px 0;
+}
+section#grainpoint-impact .section-desc-txt {
+    font-size: 20px;
+}
+.grainpoint-impact-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 0;
+}
+.grainpoint-impact-block .section-desc-txt {
+    width: 100%;
+    font-size: 18px;
+}
+img.services-img {
+    border-radius: 20px;
+}
+
+@media(min-width: 601px) {
+    .grainpoint-impact-block:nth-child(even) .services-img-side {
+        order: -1;
+    }
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {
+    .grainpoint-impact-block {
+        grid-template-columns: 100%;
+        padding: 40px 0;
+    }
+}
+/**** end of GradePoint-Impact-Section Styles ****/
+
+/**** GradePoint-Pictures-Section Styles ****/
+section#grainpoint-pictures, section#grainpoint-videos {
+    padding: 80px 0;
+}
+.grainpoints-media-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 80px;
+}
+.grainpoints-media-wrapper .gallery-photos-block {
+    height: 300px;
+}
+#grainpointVideoModal.modal {
+    background-color: transparent;
+    height: calc(80% - 100px);
+    z-index: 2012 !important;
+    overflow-y: visible;
+}
+.grainpoint-videos .modal-overlay {
+    z-index: 2010 !important;
+}
+#grainpointVideoModal .modal-content {
+    padding: 0;
+    /* border-radius: 12px; */
+    overflow: hidden;
+    height: 100%;
+    background-color: gray;
+}
+#grainpointVideoModal img.modal-close {
+    position: absolute;
+    right: 0;
+    background: white;
+    top: -53px;
+}
+iframe#gpVideoPlayer {
+    width: 100%;
+    height: 100%;
+}
+img.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    z-index: 2;
+}
+section#grainpoint-videos .gallery-photos-block::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(254, 254, 254, 0.2);
+    z-index: 1;
+}
+/* section#grainpoint-pictures .grainpoints-media-wrapper .gallery-photos-block {
+    z-index: 10000;
+} */
+
+@media(max-width: 992px) {
+    .grainpoints-media-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .grainpoints-media-wrapper {
+        grid-template-columns: 100%;
+    }
+    #grainpointVideoModal.modal {
+        max-height: 450px;
+    }
+}
+/**** end of GradePoint-Pictures-Section Styles ****/
