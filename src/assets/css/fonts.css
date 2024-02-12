@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'MTNBrighterSans';
+    src: url("../fonts/MTNBrighterSans/MTNBrighterSans-Regular.otf");
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Bold';
+    src: url("../fonts/MTNBrighterSans/MTNBrighterSans-Bold.otf");
+}
+@font-face {
+    font-family: 'MTNBrighterSans-xBold';
+    src: url("../fonts/MTNBrighterSans/MTNBrighterSans-ExtraBold.otf");
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Light';
+    src: url("../fonts/MTNBrighterSans/MTNBrighterSans-Light.otf");
+}
+@font-face {
+    font-family: 'MTNBrighterSans-Medium';
+    src: url("../fonts/MTNBrighterSans/MTNBrighterSans-Medium.otf");
+}
+
+
+@font-face {
+    font-family: 'Moderat';
+    src: url("../fonts/Moderat/Moderat-Regular.ttf");
+}
+@font-face {
+    font-family: 'Moderat-Bold';
+    src: url("../fonts/Moderat/Moderat-Bold.ttf");
+}
+@font-face {
+    font-family: 'Moderat-Medium';
+    src: url("../fonts/Moderat/Moderat-Medium.ttf");
+}
+@font-face {
+    font-family: 'Moderat-Thin';
+    src: url("../fonts/Moderat/Moderat-Thin.ttf");
+}
