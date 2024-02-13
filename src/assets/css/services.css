@@ -25,11 +25,11 @@ h4.amMapHeader {
   color: var(--pry-color);
   text-decoration: underline;
 }
-span.station-name {
+span.map-box-title {
   font-weight: bold;
   font-size: 18px;
 }
-span.station-address {
+span.map-box-desc {
   font-size: 14px;
   font-style: italic;
 }
