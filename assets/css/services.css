@@ -1,0 +1,85 @@
+/**** GrainPoint-Section Styles ****/
+section#grainpoint {
+  padding: 80px 0 70px;
+  position: relative;
+}
+.map-wrapper {
+  padding-bottom: 40px;
+}
+#map {
+    width: 100%;
+    height: 746px;
+}
+.ampopup-content {
+  min-width: 200px;
+}
+ul.locations-list {
+  padding-left: 20px !important;
+}
+ul.locations-list li {
+  list-style-type: disc !important;
+}
+h4.amMapHeader {
+  font-family: var(--font-2-bold);
+  margin-top: 0;
+  color: var(--pry-color);
+  text-decoration: underline;
+}
+span.map-box-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+span.map-box-desc {
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media(max-width: 992px){
+    #map {
+        height: 646px;
+    }
+}
+
+@media(max-width: 600px) {
+    #map {
+        height: 310px;
+    }
+}
+/**** end of GrainPoint-Section Styles ****/
+
+/**** Other-Services-Sections Styles ****/
+#other-services section {
+  padding: 80px 0 70px;
+  position: relative;
+}
+.services-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.services-wrapper .section-desc-txt {
+  width: 100%;
+  font-size: 24px;
+}
+img.services-img {
+  border-radius: 20px;
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {
+  #other-services {
+    padding-bottom: 20px;
+  }
+  #other-services section {
+    padding: 40px 0 30px;
+  }
+  .services-wrapper {
+    grid-template-columns: 100%;
+  }
+  .xs-reversed-order .services-txt-side {
+    order: -1;
+  }
+}
+/**** end of Other-Services-Sections Styles ****/
