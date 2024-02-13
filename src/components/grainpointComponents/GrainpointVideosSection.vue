@@ -10,7 +10,7 @@
                     <div 
                         class="gallery-photos-block pointer" 
                         data-aos="fade-up" 
-                        @click="openModal('https://www.youtube.com/embed/_yTWMEChGr0?si=qDW6suGsmytnm6RO')"
+                        @click="openModal('https://www.youtube.com/embed/mkGB-DYTzTw?si=eVd9fnOLT0Rcp_Un')"
                     >
                         <img  src="@/assets/images/Video1.png"  alt="gallery-vid" class="gallery-photo">
                         <img src="@/assets/images/play.svg" alt="play" class="play-icon">
@@ -19,7 +19,7 @@
                     <div 
                         class="gallery-photos-block pointer" 
                         data-aos="fade-up" 
-                        @click="openModal('https://www.youtube.com/embed/_yTWMEChGr0?si=qDW6suGsmytnm6RO')"
+                        @click="openModal('https://www.youtube.com/embed/U3TbLOPYN88?si=CCixxtZpJsTWDJPk')"
                     >
                         <img  src="@/assets/images/Video2.png"  alt="gallery-vid" class="gallery-photo">
                         <img src="@/assets/images/play.svg" alt="play" class="play-icon">
@@ -28,7 +28,7 @@
                     <div 
                         class="gallery-photos-block pointer" 
                         data-aos="fade-up" 
-                        @click="openModal('https://www.youtube.com/embed/_yTWMEChGr0?si=qDW6suGsmytnm6RO')"
+                        @click="openModal('https://www.youtube.com/embed/C2Dwu2kS4lU?si=3zcWPbgQydhQNATv')"
                     >
                         <img  src="@/assets/images/Video3.png"  alt="gallery-vid" class="gallery-photo pointer">
                         <img src="@/assets/images/play.svg" alt="play" class="play-icon">

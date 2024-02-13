@@ -3,7 +3,7 @@
         <!---=== Header Section ===--->
         <TopHeader
             title="Gallery"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+            description="View our gallery of images and videos of our operations and services"
             backgroundImg="gallery-banner.jpg"
         />
         <!---=== end of Header Section ===--->

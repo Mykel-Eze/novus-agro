@@ -15,7 +15,7 @@
                 </p>
                 <p class="section-desc-txt mt-[20px]">
                     To apply for our internship program, send a mail to
-                    <a href="mailto:info@novusagro.com" class="pry-color underline"><b>info@novusagro.com</b></a>
+                    <a href="mailto:hr@novusagro.com" class="pry-color underline"><b>hr@novusagro.com</b></a>
                 </p>
             </div>
 

@@ -3,13 +3,13 @@
     <!---=== Header Section ===--->
     <TopHeader
       title="Services"
-      description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+      description="We organize farmers into accessible groups for all stakeholders"
       backgroundImg="services-banner.jpg"
     />
     <!---=== end of Header Section ===--->
 
     <!---=== GrainPoint Section ===--->
-    <GrainPointSection />
+    <!-- <GrainPointSection /> -->
     <!---=== end of GrainPoint Section ===--->
 
     <!---=== OtherServices Section ===--->
@@ -21,14 +21,14 @@
 
 <script>
 import TopHeader from '@/components/TopHeader.vue'
-import GrainPointSection from '@/components/servicesComponents/GrainPointSection.vue'
+// import GrainPointSection from '@/components/servicesComponents/GrainPointSection.vue'
 import OtherServicesSections from '@/components/servicesComponents/OtherServicesSections.vue'
 
 export default {
     name: "ServicesPage",
     components: {
         TopHeader,
-        GrainPointSection,
+        // GrainPointSection,
         OtherServicesSections,
     },
 }

@@ -34,9 +34,9 @@
                                 <li>
                                     <router-link to="/about">About Us</router-link>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <router-link to="/faq">FAQ</router-link>
-                                </li>
+                                </li> -->
                                 <li>
                                     <router-link to="/team">Our Team</router-link>
                                 </li>
@@ -109,9 +109,9 @@
                                     <li>
                                         <router-link to="/about" class="sidenav-close">About Us</router-link>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <router-link to="/faq" class="sidenav-close">FAQ</router-link>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <router-link to="/team" class="sidenav-close">Our Team</router-link>
                                     </li>

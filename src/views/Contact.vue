@@ -3,7 +3,7 @@
         <!---=== Header Section ===--->
         <TopHeader
         title="Contact Us"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+        description=""
         backgroundImg="contact-banner.jpg"
         />
         <!---=== end of Header Section ===--->

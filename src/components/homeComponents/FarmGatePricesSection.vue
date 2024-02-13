@@ -7,7 +7,7 @@
                 <h4 class="section-sub-title center">
                     By Crop Per Metric Ton <span class="pry-color">(May 19, 2023)</span>
                 </h4>
-                <div class="farm-gate-price-wrapper" data-aos="flip-left">
+                <div class="farm-gate-price-wrapper">
                     <FarmGatePriceBlock
                         extraClass="hibiscus-block"
                         itemName="Hibiscus"

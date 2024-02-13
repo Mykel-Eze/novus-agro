@@ -3,7 +3,7 @@
     <!---=== Header Section ===--->
     <TopHeader
       title="About Us"
-      description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+      description="Novus Agro is a trade facilitation and service provision company"
       backgroundImg="about-banner.jpg"
     />
     <!---=== end of Header Section ===--->

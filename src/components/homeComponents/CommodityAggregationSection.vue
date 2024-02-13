@@ -11,11 +11,11 @@
             </div>
             <div class="ca-block-wrapper" data-aos="fade-up">
                 <div class="ca-block">
-                    <h2 class="ca-number">1000</h2>
+                    <h2 class="ca-number">900</h2>
                     <div class="ca-block-title">Farmers</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">700</h2>
+                    <h2 class="ca-number">200</h2>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
                 <div class="ca-block">

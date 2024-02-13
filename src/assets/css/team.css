@@ -63,6 +63,7 @@ section#team-members {
 .modal.team-modal {
     max-height: 81%;
     border-radius: 8px;
+    z-index: 2013 !important;
 }
 .modal.team-modal .modal-content {
     padding: 0;

@@ -3,7 +3,7 @@
         <!---=== Header Section ===--->
         <TopHeader
             title="Grainpoint"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+            description="One-point shop for both point of sales for agro-inputs and point of agro-services"
             backgroundImg="grainpoint-banner.jpeg"
         />
         <!---=== end of Header Section ===--->

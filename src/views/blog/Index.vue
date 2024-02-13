@@ -3,7 +3,7 @@
     <!---=== Header Section ===--->
     <TopHeader
       title="Blog"
-      description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+      description="Read our blog posts and articles about our services and operations"
       backgroundImg="blog-banner.jpg"
     />
     <!---=== end of Header Section ===--->

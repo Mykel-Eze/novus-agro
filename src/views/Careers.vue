@@ -3,7 +3,7 @@
         <!---=== Header Section ===--->
         <TopHeader
             title="Careers"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+            description=""
             backgroundImg="careers-banner.jpg"
         />
         <!---=== end of Header Section ===--->

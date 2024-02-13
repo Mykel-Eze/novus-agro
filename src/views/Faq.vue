@@ -3,7 +3,7 @@
         <!---=== Header Section ===--->
         <TopHeader
             title="FAQ"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic accusantium asperiores."
+            description="Frequently Asked Questions about our services and operations"
             backgroundImg="faq-banner.jpg"
         />
         <!---=== end of Header Section ===--->
