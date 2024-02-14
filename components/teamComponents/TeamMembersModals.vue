@@ -171,7 +171,7 @@
         </div>
     </div>
 
-    <div id="mike-eko" class="modal team-modal">
+    <!-- <div id="mike-eko" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
         <div class="modal-content">
             <div class="member-modal-wrapper">
@@ -193,7 +193,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
