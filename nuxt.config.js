@@ -9,7 +9,10 @@ export default {
       autoprefixer: {},
     },
   },
-  modules: ['nuxt-swiper'],
+  modules: [
+    '@nuxtjs/axios',
+    'nuxt-swiper'
+  ],
   app: {
     head: {
       link: [
