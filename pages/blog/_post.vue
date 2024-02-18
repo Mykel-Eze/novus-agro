@@ -50,6 +50,34 @@
 <script>
 export default {
     name: 'BlogPostPage',
+    data () {
+        return {
+            webURL: 'http://127.0.0.1:8000'
+        }
+    },
+    methods: {
+    async getMyBlog () {
+      await this.$axios
+        .get(`/blog/${this.slug}`)
+        .then((response) => {
+          this.blogData = response.data.response.data
+        })
+        .catch((error) => {
+          this.errors = error
+        })
+    },
+    formatDescription: (description) => {
+      const strippedHtml = description.replace(/<[^>]+>/g, '')
+      return strippedHtml
+    },
+    formatCreateDate: (thedate) => {
+      const dt = new Date(thedate)
+      return dt.toDateString()
+    },
+    getNewsImage (img) {
+      return this.webURL + img
+    }
+    },
 }
 </script>
 

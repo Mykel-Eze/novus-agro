@@ -28,21 +28,25 @@
                                 <div class="cds-info-title">
                                     Contact Info
                                 </div>
-                                <div class="cds-info-row flex-div">
-                                    <img src="@/assets/images/location-icon.svg" alt="location" class="cds-info-img">
-                                    <a class="cds-info-link">
-                                        <b>Operational Office Address:</b> No 5a Craig Street, Ogudu GRA, Lagos, Nigeria.
-                                    </a>
-                                </div>
-                                <div class="cds-info-row flex-div">
-                                    <img src="@/assets/images/call-icon.svg" alt="call" class="cds-info-img">
-                                    <a href="tel:+2348139466737" class="cds-info-link">+234 813 946 6737</a>
-                                </div>
-                                <div class="cds-info-row flex-div">
-                                    <img src="@/assets/images/mail-icon-2.svg" alt="call" class="cds-info-img">
-                                    <a href="mailto:info@novusagro.com"
-                                        class="cds-info-link">info@novusagro.com</a>
-                                </div>
+                                <template v-if="contact_address_data.length > 0">
+                                    <template v-for="(contact, index) in contact_address_data" :key="index">
+                                        <div class="cds-info-row flex-div">
+                                            <img src="@/assets/images/location-icon.svg" alt="location" class="cds-info-img">
+                                            <a class="cds-info-link">
+                                                <b> {{ contact.title }} :</b> {{ contact.address }}
+                                            </a>
+                                        </div>
+                                        <div class="cds-info-row flex-div">
+                                            <img src="@/assets/images/call-icon.svg" alt="call" class="cds-info-img">
+                                            <a :href="'tel:'+ contact.telephone"   class="cds-info-link"> {{ contact.telephone }}</a>
+                                        </div>
+                                        <div class="cds-info-row flex-div">
+                                            <img src="@/assets/images/mail-icon-2.svg" alt="call" class="cds-info-img">
+                                            <a  :href="'mailto:' +  contact.email  "
+                                                class="cds-info-link"> {{ contact.email }} </a>
+                                        </div>
+                                    </template>
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -57,6 +61,12 @@ import ContactForm from './ContactForm.vue'
 
 export default {
     name: 'ContactSection',
+    props: {
+      contact_address_data: {
+      type: [Object, Array],
+      required: true
+    }
+    },
     components: {
         ContactForm
     },

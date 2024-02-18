@@ -9,7 +9,7 @@
         <!---=== end of Header Section ===--->
 
         <!---=== Contact Section ===--->
-        <ContactSection />
+        <ContactSection :contact_address_data="contact_address_data" />
         <!---=== end of Contact Section ===--->
 
         <!---=== Contact-Map Section ===--->
@@ -21,5 +21,24 @@
 <script>
 export default {
     name: 'ContactPage',
+    data() {
+        return {
+            contact_address_data: {}
+        }
+    },
+    methods: {
+        getContactAddresses () {
+            $fetch('http://127.0.0.1:8000/api/contact-address-data')
+            .then((response) => {
+            this.contact_address_data = response.response.data
+            }).catch((error) => {
+            this.errors = error
+            })
+        },
+    },
+    mounted () {
+        console.log("contact paged detail")
+        this.getContactAddresses()
+    }
 }
 </script>

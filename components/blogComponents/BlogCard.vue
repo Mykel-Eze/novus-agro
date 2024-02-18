@@ -15,6 +15,11 @@
 <script>
 export default {
     name: "BlogCard",
+    data () {
+        return {
+            webURL : 'http://127.0.0.1:8000'
+        }
+    },
     props: {
         blogImg: {
             type: String,
@@ -30,13 +35,13 @@ export default {
         },
         blogLink: {
             type: String,
-            default: '/blog/post',
             required: true,
         },
     },
     methods: {
         getImageSrc(blogImg) {
-            return `/other-images/${blogImg}`;
+            // return `/other-images/${blogImg}`;
+            return `${this.webURL}${blogImg}`;
         },
     }
 }
@@ -45,3 +50,4 @@ export default {
 <style>
 
 </style>
+
