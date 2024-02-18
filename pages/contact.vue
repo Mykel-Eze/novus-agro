@@ -23,12 +23,15 @@ export default {
     name: 'ContactPage',
     data() {
         return {
-            contact_address_data: {}
+            contact_address_data: {},
+            webURL: 'http://127.0.0.1:8000',
+            baseURL: 'http://127.0.0.1:8000/api/',
         }
     },
     methods: {
         getContactAddresses () {
-            $fetch('http://127.0.0.1:8000/api/contact-address-data')
+            // $fetch('http://127.0.0.1:8000/api/contact-address-data')
+            $fetch(`${this.baseURL}contact-address-data`)
             .then((response) => {
             this.contact_address_data = response.response.data
             }).catch((error) => {

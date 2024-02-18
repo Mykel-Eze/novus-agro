@@ -18,7 +18,7 @@
 
                 <div id="photos" class="gallery-tab-content">
                     <div class="gallery-photos-wrapper">
-                        <GalleryPhotos />
+                        <GalleryPhotos :galleries="galleries" />
                     </div>
                 </div>
                 <div id="videos" class="gallery-tab-content">
@@ -45,6 +45,27 @@ export default {
 
         var elemsMaterialbox = document.querySelectorAll('.materialboxed');
         M.Materialbox.init(elemsMaterialbox);
+        this.getGalleryItems()
+
+    },
+    data () {
+        return {
+            errors: {},
+            galleries: {},
+            webURL: 'http://127.0.0.1:8000',
+            baseURL: 'http://127.0.0.1:8000/api/',
+        }
+    },
+    methods: {
+        async getGalleryItems () {
+            await $fetch(`${this.baseURL}gallery`)
+            .then((response) => {
+                this.galleries = response.response.data
+                console.log(this.galleries)
+            }).catch((error) => {
+            this.errors = error
+            })
+      },
     },
 }
 </script>

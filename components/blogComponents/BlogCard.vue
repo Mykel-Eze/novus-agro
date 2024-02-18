@@ -1,5 +1,6 @@
 <template>
-  <router-link :to="blogLink" class="blog-card" data-aos="fade-up">
+  <!-- <router-link :to="blogLink" class="blog-card" data-aos="fade-up"> -->
+  <router-link :to="`/blog/${blogSlug}`" class="blog-card" data-aos="fade-up">
     <div class="blog-card-img-wrapper">
         <img :src="getImageSrc(blogImg)" :alt="blogTitle" class="blog-card-img">
     </div>
@@ -37,10 +38,13 @@ export default {
             type: String,
             required: true,
         },
+        blogSlug: {
+            type: String,
+            required: true,
+        },
     },
     methods: {
         getImageSrc(blogImg) {
-            // return `/other-images/${blogImg}`;
             return `${this.webURL}${blogImg}`;
         },
     }

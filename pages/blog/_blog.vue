@@ -50,22 +50,39 @@
 <script>
 export default {
     name: 'BlogPostPage',
+    async asyncData ({ params }) {
+        const slug = await params.blog // When calling /abc the slug will be "abc"
+        return { slug }
+    },
     data () {
         return {
-            webURL: 'http://127.0.0.1:8000'
+            webURL: 'http://127.0.0.1:8000',
+            baseURL: 'http://127.0.0.1:8000/api/',
+            blogData: {},
+            errors: {}
         }
     },
     methods: {
-    async getMyBlog () {
-      await this.$axios
-        .get(`/blog/${this.slug}`)
+    async getSingleBlog () {
+        // await $fetch(this.baseURL+'blog')
+        await $fetch(`${this.baseURL}blog/${this.slug}`)
         .then((response) => {
-          this.blogData = response.data.response.data
-        })
-        .catch((error) => {
-          this.errors = error
+            this.blogData = response.response.data
+            console.log(this.blogData)
+        }).catch((error) => {
+        this.errors = error
         })
     },
+    // async getGallery () {
+    //   await this.$axios
+    //     .get(`/blog/${this.slug}`)
+    //     .then((response) => {
+    //       this.blogData = response.data.response.data
+    //     })
+    //     .catch((error) => {
+    //       this.errors = error
+    //     })
+    // },
     formatDescription: (description) => {
       const strippedHtml = description.replace(/<[^>]+>/g, '')
       return strippedHtml
@@ -77,6 +94,9 @@ export default {
     getNewsImage (img) {
       return this.webURL + img
     }
+    },
+    mounted() {
+        this.getSingleBlog();
     },
 }
 </script>

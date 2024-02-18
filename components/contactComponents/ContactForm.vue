@@ -1,5 +1,5 @@
 <template>
-    <form id="contact-form" @submit.prevent="submitform13" class="cfs-block" data-aos="fade-up" data-aos-duration="500">
+    <form id="contact-form" @submit.prevent="submitForm" class="cfs-block" data-aos="fade-up" data-aos-duration="500">
         <div class="input-field">
             <label for="full_name" class="active">Full Name <sup class="red-text">*</sup></label>
             <input id="full_name" type="text" name="full_name" v-model="theformdata.name"
@@ -44,19 +44,13 @@ export default {
             },
             errors: {},
             categories: {},
-            contact_address_data: {}
+            contact_address_data: {},
+            webURL : 'http://127.0.0.1:8000',
+            baseURL : 'http://127.0.0.1:8000/api/'
         }
     },
     methods: {
-        getContactAddresses () {
-            $fetch('contact-address-data')
-            .then((response) => {
-            this.contact_address_data = response.response.data
-            }).catch((error) => {
-            this.errors = error
-            })
-        },
-        async  submitform13() {
+        async  submitForm() {
         const formdata = this.theformdata
         const todo = await $fetch('http://127.0.0.1:8000/api/save-contact', {
             method: 'POST',
@@ -73,21 +67,11 @@ export default {
                 this.errors = error
                 })
             },
-        async getCategories (context) {
-            await $fetch('http://127.0.0.1:8000/api/contact-categories')
-            .then((response) => {
-                this.categories = response.response.data
-                console.log(this.categories.length)
-            }).catch((error) => {
-            this.errors = error
-            })
-        },
     },
     mounted() {
         console.log("mounted one");
         const elemsSelect = document.querySelectorAll('select');
         M.FormSelect.init(elemsSelect);
-        this.getContactAddresses();
     }
 }
 </script>

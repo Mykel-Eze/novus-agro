@@ -21,18 +21,20 @@ export default {
       return {
         errors: {},
         blogs: {},
+        webURL: 'http://127.0.0.1:8000',
+        baseURL: 'http://127.0.0.1:8000/api/',
       }
     },
     methods: {
-      async getBlogPosts (context) {
-            await $fetch('http://127.0.0.1:8000/api/blog')
+      async getBlogPosts () {
+            await $fetch(`${this.baseURL}blog`)
             .then((response) => {
                 this.blogs = response.response.data
                 console.log(this.blogs)
             }).catch((error) => {
             this.errors = error
             })
-        },
+      },
     },
     mounted() {
       this.getBlogPosts()

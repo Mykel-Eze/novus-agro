@@ -11,23 +11,33 @@
             </div>
             <div class="ca-block-wrapper" data-aos="fade-up">
                 <div class="ca-block">
-                    <h2 class="ca-number">900</h2>
-                    <div class="ca-block-title">Farmers</div>
+                    <template v-if="commodityAgres">
+                        <h2 class="ca-number"> {{ commodityAgres.farmers_count }} </h2>
+                    </template>
+                    <div class="ca-block-title">Farmers </div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">200</h2>
+                    <template v-if="commodityAgres">
+                        <h2 class="ca-number"> {{ commodityAgres.facilitators_count }} </h2>
+                    </template>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">100</h2>
+                    <template v-if="commodityAgres">
+                        <h2 class="ca-number">{{ commodityAgres.hectares_planted_count }}</h2>
+                    </template>
                     <div class="ca-block-title">Hectares Planted</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">04</h2>
+                    <template v-if="commodityAgres">
+                        <h2 class="ca-number">{{ commodityAgres.states_covered_count }}</h2>
+                    </template>
                     <div class="ca-block-title">States</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">120</h2>
+                    <template v-if="commodityAgres">
+                        <h2 class="ca-number">{{ commodityAgres.grainpoints_hubs_count }}</h2>
+                    </template>
                     <div class="ca-block-title">Grainpoint Hubs</div>
                 </div>
             </div>
@@ -41,6 +51,12 @@ import $ from "jquery"
 
 export default {
     name: 'CommodityAggregationSection',
+    props: {
+      commodityAgres: {
+      type: [Object, Array],
+      required: true
+    }
+    },
     components: {},
     mounted() {
         this.observeSection();
