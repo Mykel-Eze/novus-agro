@@ -6,9 +6,9 @@
     <div class="blog-card-txt-wrapper">
         <div class="blog-date-wrapper">{{ blogDate }}</div>
         <div class="blog-card-title">{{ blogTitle }}</div>
-        <div class="blog-text">
-            {{ blogText }}
-        </div>
+        <div class="blog-text" ref="blogText">{{ blogText }}</div>
+
+        <div class="read-more-btn-wrapper">Read More</div>
     </div>
   </router-link>
 </template>
@@ -43,7 +43,28 @@ export default {
         getImageSrc(blogImg) {
             return `/other-images/${blogImg}`;
         },
-    }
+    },
+    mounted() {
+        this.truncateBlogText();
+    },
+    updated() {
+        this.truncateBlogText();
+    },
+    methods: {
+        getImageSrc(blogImg) {
+            return `/other-images/${blogImg}`;
+        },
+        truncateBlogText() {
+            const blogTextElement = this.$refs.blogText;
+            if (blogTextElement) {
+                blogTextElement.style.webkitLineClamp = '3';
+                blogTextElement.style.overflow = 'hidden';
+                blogTextElement.style.textOverflow = 'ellipsis';
+                blogTextElement.style.display = '-webkit-box';
+                blogTextElement.style.webkitBoxOrient = 'vertical';
+            }
+        },
+    },
 }
 </script>
 
@@ -51,5 +72,16 @@ export default {
 .blog-card .blog-date-wrapper {
     font-size: 12px;
     margin-bottom: 10px;
+}
+
+.blog-card .blog-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read-more-btn-wrapper {
+    font-weight: bold;
 }
 </style>
