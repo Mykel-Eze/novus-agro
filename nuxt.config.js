@@ -60,24 +60,13 @@ export default {
       pathPrefix: false,
     },
   ],
-  fetch: {
-    baseURL: 'http://127.0.0.1:8000/api/',
-  },
+  // fetch: {
+  //   baseURL: 'http://127.0.0.1:8000/api/',
+  // },
   runtimeConfig: {
     public: {
-      BASE_URL: 'http://127.0.0.1:8000/api/',
+      baseURL: 'http://127.0.0.1:8000/api/',
+      webURL: 'http://127.0.0.1:8000',
     },
   },
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  // plugins: [
-  //   {
-  //     src: '@/plugins/noty.js',
-  //     mode: 'client'
-  //   }
-    // ,
-    // {
-    //   src: '@/plugins/tawk-messenger.client.js',
-    //   mode: 'client'
-    // }
-  // ],
 }

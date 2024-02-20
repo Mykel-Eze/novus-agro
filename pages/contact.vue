@@ -19,6 +19,9 @@
 </template>
 
 <script>
+
+const nuxtData = require('../../nuxt.config')
+
 export default {
     name: 'ContactPage',
     data() {
@@ -26,6 +29,7 @@ export default {
             contact_address_data: {},
             webURL: 'http://127.0.0.1:8000',
             baseURL: 'http://127.0.0.1:8000/api/',
+            webURL: nuxtData.default.runtimeConfig.public.webURL
         }
     },
     methods: {
