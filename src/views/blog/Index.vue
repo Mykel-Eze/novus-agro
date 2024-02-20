@@ -9,7 +9,7 @@
     <!---=== end of Header Section ===--->
 
     <!---=== Blog Section ===--->
-    <BlogsSection />
+    <!-- <BlogsSection /> -->
     <!---=== end of Blog Section ===--->
   </div>
 </template>

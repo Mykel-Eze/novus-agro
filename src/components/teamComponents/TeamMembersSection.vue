@@ -52,7 +52,7 @@
                     <img src="@/assets/images/team/Tope-Olajide.jpg" alt="Tope Olajide" class="team-member-picture">
 
                     <div class="team-member-details">
-                        <div class="team-member-name">Tope Olajide</div>
+                        <div class="team-member-name">Temitope Olajide</div>
                         <div class="team-member-role">Opportunities and Business Development</div>
                     </div>
                 </div>

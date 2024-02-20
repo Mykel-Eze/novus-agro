@@ -159,11 +159,10 @@
                         <div class="member-role">Opportunities and Business Development</div>
                         <div class="member-name">Temitope Olajide</div>
                         <div class="member-desc">
-                            Temitope started her working career as an intern at FrieslandCampina WAMCO. In 2018, she
-                            joined Novus Agro Ltd as an intern where she quickly rose to become the head
-                            opportunities and Business development  for the Organization. Miss. Temitope holds
-                            a bachelor’s degree in Food science and technology from the Obafemi Awolowo
-                            University, and is a 2019 Utiva data school alumni.
+                            Temitope embarked on her professional journey as an intern at FrieslandCampina WAMCO
+                             before moving to Novus Agro Ltd in 2018, where she rapidly advanced from an intern to 
+                             the Head of Opportunities and Business Development. She holds a Bachelor of Science in 
+                             Food Science and Technology from Obafemi Awolowo University.
                         </div>
                     </div>
                 </div>
@@ -171,7 +170,7 @@
         </div>
     </div>
 
-    <!-- <div id="mike-eko" class="modal team-modal">
+     <div id="mike-eko" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
         <div class="modal-content">
             <div class="member-modal-wrapper">
@@ -193,7 +192,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </template>
 
 <script>

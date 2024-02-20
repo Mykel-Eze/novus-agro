@@ -41,7 +41,7 @@
 
                 <div class="footer-copyright-social flex-div justify-content-btw">
                     <div class="footer-copyright">
-                        © Copyright {{ currentYear }} - NovusAgro Nigeria Limited
+                        © Copyright {{ currentYear }} - Novus Agro Nigeria Limited
                     </div>
                     <div class="flex-div footer-social">
                         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
@@ -49,12 +49,12 @@
                             <img src="@/assets/images/twitter.svg" alt="twitter" class="social-link-icon" />
                             <span>Twitter</span>
                         </a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/novus_agro/" target="_blank" rel="noopener noreferrer"
                             class="footer-link flex-div sec-color">
                             <img src="@/assets/images/instagram.svg" alt="instagram" class="social-link-icon" />
                             <span>Instagram</span>
                         </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.linkedin.com/company/novus-agro-limited/" target="_blank" rel="noopener noreferrer"
                             class="footer-link flex-div sec-color">
                             <img src="@/assets/images/linkedin.svg" alt="linkedin" class="social-link-icon" />
                             <span>Linkedin</span>

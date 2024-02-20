@@ -11,23 +11,23 @@
             </div>
             <div class="ca-block-wrapper" data-aos="fade-up">
                 <div class="ca-block">
-                    <h2 class="ca-number">900</h2>
+                    <h2 class="ca-number">71720</h2>
                     <div class="ca-block-title">Farmers</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">200</h2>
+                    <h2 class="ca-number">206</h2>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">100</h2>
+                    <h2 class="ca-number">7150</h2>
                     <div class="ca-block-title">Hectares Planted</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">04</h2>
+                    <h2 class="ca-number">21</h2>
                     <div class="ca-block-title">States</div>
                 </div>
                 <div class="ca-block">
-                    <h2 class="ca-number">120</h2>
+                    <h2 class="ca-number">1016</h2>
                     <div class="ca-block-title">Grainpoint Hubs</div>
                 </div>
             </div>
@@ -46,19 +46,19 @@ export default {
         this.observeSection();
     },
     methods: {
-        animateNumbers() {
-            $('.ca-number').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 4000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now).toLocaleString('en-US'));
-                    }
-                });
-            });
-        },
+        // animateNumbers() {
+        //     $('.ca-number').each(function () {
+        //         $(this).prop('Counter', 0).animate({
+        //             Counter: $(this).text()
+        //         }, {
+        //             duration: 4000,
+        //             easing: 'swing',
+        //             step: function (now) {
+        //                 $(this).text(Math.ceil(now).toLocaleString('en-US'));
+        //             }
+        //         });
+        //     });
+        // },
         observeSection() {
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
