@@ -11,7 +11,7 @@
             </div>
             <div class="ca-block-wrapper" data-aos="fade-up">
                 <div class="ca-block">
-                    <h2 class="ca-number">900</h2>
+                    <h2 class="ca-number">1,000</h2>
                     <div class="ca-block-title">Farmers</div>
                 </div>
                 <div class="ca-block">
@@ -48,8 +48,9 @@ export default {
     methods: {
         animateNumbers() {
             $('.ca-number').each(function () {
+                var number = $(this).text().replace(/,/g, ''); // Remove commas
                 $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
+                    Counter: number
                 }, {
                     duration: 4000,
                     easing: 'swing',
