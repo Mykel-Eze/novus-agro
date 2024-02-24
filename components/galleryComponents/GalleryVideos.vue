@@ -1,5 +1,17 @@
 <template>
-    <div class="gallery-photos-block">
+    <template v-if="videos.length > 0">
+        <template v-for="(video,index) in videos" :key="index">
+            <div class="gallery-photos-block">
+                <img 
+                    :src="getPhoto(video.image)"
+                    :alt="video.name"
+                    class="gallery-photo pointer"
+                    @click="openModal('https://www.youtube.com/embed/_yTWMEChGr0?si=qDW6suGsmytnm6RO')"
+                >
+            </div>
+        </template>
+    </template>
+    <!-- <div class="gallery-photos-block">
         <img 
             src="@/assets/images/gallery/gallery-vid-1.jpg" 
             alt="gallery-vid"
@@ -30,7 +42,7 @@
             class="gallery-photo pointer"
             @click="openModal('https://www.youtube.com/embed/BLWxjtcx9eI')"
         >
-    </div>
+    </div> -->
 
      <!-- The Modal -->
     <div id="videoModal" class="modal">
@@ -43,9 +55,22 @@
 
 <script>
 import M from 'materialize-css';
+import nuxtData from "../nuxt.config"
 
 export default {
     name: 'GalleryVideos',
+    data() {
+        return {
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
+        }
+    },
+    props: {
+      videos: {
+      type: [Object, Array],
+      required: true
+    }
+    },
     methods: {
         openModal(videoSrc) {
             const videoPlayer = document.getElementById('videoPlayer');
@@ -59,6 +84,9 @@ export default {
                 }
             });
             instance.open();
+        },
+        getPhoto (path) {
+          return this.webURL + path
         }
     }
 }

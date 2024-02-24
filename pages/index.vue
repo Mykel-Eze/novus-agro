@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
   name: 'HomePage',
   layout: 'default',
@@ -34,8 +36,8 @@ export default {
     return {
       errors: {},
       commodityAgres: {},
-      webURL : 'http://127.0.0.1:8000',
-      baseURL : 'http://127.0.0.1:8000/api/'
+      baseURL: nuxtData.runtimeConfig.public.baseURL,
+      webURL: nuxtData.runtimeConfig.public.webURL
     }
   },
   methods: {
@@ -43,16 +45,13 @@ export default {
         await $fetch(`${this.baseURL}numerical-information`)
         .then((response) => {
             this.commodityAgres = response.response.data
-            console.log(response.response)
         }).catch((error) => {
         this.errors = error
         })
     },
   },
   mounted() {
-    console.log("home comp 1")
-    this.getCommodityAggregation();
-    console.log("home comp")
+    this.getCommodityAggregation()
   },
 }
 </script>

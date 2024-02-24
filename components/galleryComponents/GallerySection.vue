@@ -23,7 +23,7 @@
                 </div>
                 <div id="videos" class="gallery-tab-content">
                     <div class="gallery-photos-wrapper">
-                        <GalleryVideos />
+                        <GalleryVideos :videos="videos" />
                     </div>
                 </div>
             </div>
@@ -40,33 +40,45 @@ export default {
     name: 'GallerySection',
     components: { GalleryPhotos, GalleryVideos },
     mounted() {
+        this.getGalleryItems()
+
+        this.getVideos()
+
         const elemsTabs = document.querySelectorAll('.tabs')
         M.Tabs.init(elemsTabs)
 
         var elemsMaterialbox = document.querySelectorAll('.materialboxed');
         M.Materialbox.init(elemsMaterialbox);
-        this.getGalleryItems()
 
     },
     data () {
         return {
             errors: {},
             galleries: {},
-            webURL: 'http://127.0.0.1:8000',
-            baseURL: 'http://127.0.0.1:8000/api/',
+            videos: {},
         }
     },
     methods: {
         async getGalleryItems () {
             await $fetch(`${this.baseURL}gallery`)
             .then((response) => {
+                alert("its here")
                 this.galleries = response.response.data
-                console.log(this.galleries)
+                console.log(this.response.response.data)
             }).catch((error) => {
             this.errors = error
             })
-      },
-    },
+        },
+        async getVideos () {
+            await $fetch(`${this.baseURL}videos`)
+            .then((response) => {
+                this.videos = response.response.data
+                console.log(this.response.response.data)
+            }).catch((error) => {
+            this.errors = error
+            })
+        },
+    }
 }
 </script>
 

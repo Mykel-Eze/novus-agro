@@ -15,14 +15,18 @@
 </template>
 
 <script>
+
+import nuxtData from "../nuxt.config"
+
 export default {
+  
     name: 'BlogPage',
     data () {
       return {
         errors: {},
         blogs: {},
-        webURL: 'http://127.0.0.1:8000',
-        baseURL: 'http://127.0.0.1:8000/api/',
+        baseURL: nuxtData.runtimeConfig.public.baseURL,
+        webURL: nuxtData.runtimeConfig.public.webURL
       }
     },
     methods: {
@@ -30,14 +34,13 @@ export default {
             await $fetch(`${this.baseURL}blog`)
             .then((response) => {
                 this.blogs = response.response.data
-                console.log(this.blogs)
             }).catch((error) => {
             this.errors = error
             })
       },
     },
     mounted() {
-      this.getBlogPosts()
+      this.getBlogPosts();
     },
 }
 </script>

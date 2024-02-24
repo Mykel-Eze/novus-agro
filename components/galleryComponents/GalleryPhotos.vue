@@ -1,8 +1,12 @@
 <template>
-    <div class="gallery-photos-block">
-        <img src="@/assets/images/gallery/gallery-img-1.jpg" alt="gallery-img" class="gallery-photo materialboxed">
-    </div>
-    <div class="gallery-photos-block">
+    <template v-if="galleries.length > 0 ">
+        <template v-for="(gallery,index) in galleries" :key="index">
+            <div class="gallery-photos-block">
+                <img :src="getPhoto(gallery.image)" :alt="gallery.title" class="gallery-photo materialboxed">
+            </div>
+        </template>
+    </template>
+    <!-- <div class="gallery-photos-block">
         <img src="@/assets/images/gallery/gallery-img-2.jpg" alt="gallery-img" class="gallery-photo materialboxed">
     </div>
     <div class="gallery-photos-block">
@@ -88,12 +92,31 @@
     </div>
     <div class="gallery-photos-block">
         <img src="@/assets/images/gallery/gallery-img-30.jpg" alt="gallery-img" class="gallery-photo materialboxed">
-    </div>
+    </div> -->
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
     name: 'GalleryPhotos',
+    data() {
+        return {
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
+        }
+    },
+    props: {
+      galleries: {
+      type: [Object, Array],
+      required: true
+    }
+    },
+    methods: {
+        getPhoto (path) {
+          return this.webURL + path
+        }
+    },
 }
 </script>
 

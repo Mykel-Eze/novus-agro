@@ -48,6 +48,9 @@
 </template>
 
 <script>
+
+import nuxtData from "../nuxt.config"
+
 export default {
     name: 'BlogPostPage',
     async asyncData ({ params }) {
@@ -56,15 +59,14 @@ export default {
     },
     data () {
         return {
-            webURL: 'http://127.0.0.1:8000',
-            baseURL: 'http://127.0.0.1:8000/api/',
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL,
             blogData: {},
             errors: {}
         }
     },
     methods: {
     async getSingleBlog () {
-        // await $fetch(this.baseURL+'blog')
         await $fetch(`${this.baseURL}blog/${this.slug}`)
         .then((response) => {
             this.blogData = response.response.data
@@ -73,16 +75,6 @@ export default {
         this.errors = error
         })
     },
-    // async getGallery () {
-    //   await this.$axios
-    //     .get(`/blog/${this.slug}`)
-    //     .then((response) => {
-    //       this.blogData = response.data.response.data
-    //     })
-    //     .catch((error) => {
-    //       this.errors = error
-    //     })
-    // },
     formatDescription: (description) => {
       const strippedHtml = description.replace(/<[^>]+>/g, '')
       return strippedHtml

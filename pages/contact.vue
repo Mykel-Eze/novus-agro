@@ -20,21 +20,19 @@
 
 <script>
 
-const nuxtData = require('../../nuxt.config')
+import nuxtData from "../nuxt.config"
 
 export default {
     name: 'ContactPage',
     data() {
         return {
             contact_address_data: {},
-            webURL: 'http://127.0.0.1:8000',
-            baseURL: 'http://127.0.0.1:8000/api/',
-            webURL: nuxtData.default.runtimeConfig.public.webURL
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
         }
     },
     methods: {
         getContactAddresses () {
-            // $fetch('http://127.0.0.1:8000/api/contact-address-data')
             $fetch(`${this.baseURL}contact-address-data`)
             .then((response) => {
             this.contact_address_data = response.response.data
@@ -44,7 +42,6 @@ export default {
         },
     },
     mounted () {
-        console.log("contact paged detail")
         this.getContactAddresses()
     }
 }
