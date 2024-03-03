@@ -9,17 +9,40 @@
     <!---=== end of Header Section ===--->
 
     <!---=== Team-Members Section ===--->
-    <TeamMembersSection />
+    <TeamMembersSection :teams="teams" />
     <!---=== end of Team-Members Section ===--->
 
     <!---=== Team-Member Modal ===--->
-    <TeamMembersModals />
+    <TeamMembersModals :teams="teams" />
     <!---=== end of Team-Member Modal ===--->
   </div>
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
     name: 'TeamPage',
+    data() {
+      return {
+        errors: {},
+        teams: {},
+        baseURL: nuxtData.runtimeConfig.public.baseURL,
+        webURL: nuxtData.runtimeConfig.public.webURL
+      }
+    },
+    methods: {
+      async getTeamMember () {
+        await $fetch(`${this.baseURL}people-management`)
+        .then((response) => {
+            this.teams = response.response.data
+        }).catch((error) => {
+            this.errors = error
+        })
+    },
+    },
+    mounted() {
+      this.getTeamMember();
+    },
 }
 </script>

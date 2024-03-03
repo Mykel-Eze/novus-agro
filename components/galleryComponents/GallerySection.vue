@@ -35,6 +35,7 @@
 import M from 'materialize-css';
 import GalleryPhotos from './GalleryPhotos.vue';
 import GalleryVideos from './GalleryVideos.vue';
+import nuxtData from "../nuxt.config"
 
 export default {
     name: 'GallerySection',
@@ -51,20 +52,24 @@ export default {
         M.Materialbox.init(elemsMaterialbox);
 
     },
+    updated() {
+        var elemsMaterialbox = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(elemsMaterialbox);
+    },
     data () {
         return {
             errors: {},
             galleries: {},
             videos: {},
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
         }
     },
     methods: {
         async getGalleryItems () {
             await $fetch(`${this.baseURL}gallery`)
             .then((response) => {
-                alert("its here")
                 this.galleries = response.response.data
-                console.log(this.response.response.data)
             }).catch((error) => {
             this.errors = error
             })
@@ -73,7 +78,6 @@ export default {
             await $fetch(`${this.baseURL}videos`)
             .then((response) => {
                 this.videos = response.response.data
-                console.log(this.response.response.data)
             }).catch((error) => {
             this.errors = error
             })

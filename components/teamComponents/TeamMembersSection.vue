@@ -5,7 +5,19 @@
                 <h2 class="section-title center">Team Members</h2>
             </div>
             <div class="team-members-wrapper">
-                <div class="team-members-block modal-trigger" data-target="emmanuel-saseun" data-aos="fade-up">
+                <template v-if="teams.length > 0">
+                    <template v-for="(team,index) in teams" :key="index">
+                        <div class="team-members-block modal-trigger" :data-target="team.name" data-aos="fade-up">
+                            <img :src="getPhoto(team.photo)" :alt="team.name" class="team-member-picture">
+
+                            <div class="team-member-details">
+                                <div class="team-member-name">{{ team.name }}</div>
+                                <div class="team-member-role">{{ team.position }}</div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <!-- <div class="team-members-block modal-trigger" data-target="emmanuel-saseun" data-aos="fade-up">
                     <img src="@/assets/images/team/Emmanuel-Saseun.jpg" alt="Emmanuel Saseun" class="team-member-picture">
 
                     <div class="team-member-details">
@@ -64,15 +76,34 @@
                         <div class="team-member-name">Mike Eko</div>
                         <div class="team-member-role">Learning and Org. Improvement</div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
-    name: "TeamMembersSection"
+    name: "TeamMembersSection",
+    data() {
+        return {
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
+        }
+    },
+    props: {
+      teams: {
+      type: [Object, Array],
+      required: true
+    }
+    },
+    methods: {
+        getPhoto (path) {
+          return this.webURL + path
+        }
+    },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="home-page">
     <!---=== Hero Section ===--->
-    <HeroSection />
+    <HeroSection :banners="banners" />
     <!---=== end of Hero Section ===--->
 
     <!---=== CommodityAggregation Section ===--->
@@ -36,6 +36,7 @@ export default {
     return {
       errors: {},
       commodityAgres: {},
+      banners: {},
       baseURL: nuxtData.runtimeConfig.public.baseURL,
       webURL: nuxtData.runtimeConfig.public.webURL
     }
@@ -46,13 +47,23 @@ export default {
         .then((response) => {
             this.commodityAgres = response.response.data
         }).catch((error) => {
-        this.errors = error
+            this.errors = error
+        })
+    },
+    async getBanners () {
+        await $fetch(`${this.baseURL}banner`)
+        .then((response) => {
+            this.banners = response.response.data
+        }).catch((error) => {
+            this.errors = error
         })
     },
   },
   mounted() {
     this.getCommodityAggregation()
-  },
+
+    this.getBanners()
+  }
 }
 </script>
 

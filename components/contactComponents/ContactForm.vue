@@ -29,7 +29,7 @@
 
 <script>
 import M from 'materialize-css';
-import { baseURL } from '~/node_modules/nuxt/dist/core/runtime/nitro/paths';
+import nuxtData from "../nuxt.config"
 
 export default {
     name: "ContactForm",
@@ -45,31 +45,30 @@ export default {
             errors: {},
             categories: {},
             contact_address_data: {},
-            webURL : 'http://127.0.0.1:8000',
-            baseURL : 'http://127.0.0.1:8000/api/'
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
         }
     },
     methods: {
         async  submitForm() {
-        const formdata = this.theformdata
-        const todo = await $fetch('http://127.0.0.1:8000/api/save-contact', {
+        const formdata = this.theformdata 
+        const todo = await $fetch(`${this.baseURL}save-contact`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: formdata
             }).then((resp) => {
-                alert('successfully')
+                alert('successful')
                 // this.$noty.success('Your message has been sent sucessfully!')
                 this.theformdata = {}
                 this.theformdata.type = 'contact'
-                }).catch((error) => {
+            }).catch((error) => {
                 this.errors = error
-                })
-            },
+            })
+        },
     },
     mounted() {
-        console.log("mounted one");
         const elemsSelect = document.querySelectorAll('select');
         M.FormSelect.init(elemsSelect);
     }

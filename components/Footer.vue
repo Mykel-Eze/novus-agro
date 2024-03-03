@@ -30,9 +30,9 @@
                     </div>
                     <div class="footer-block">
                         <div class="footer-block-title">Sign up for the newsletter</div>
-                        <form action="#" class="footer-newsletter-form">
+                        <form @submit.prevent="submitForm" class="footer-newsletter-form">
                             <div class="input-field flex-div">
-                                <input type="email" id="newsletter-inp" />
+                                <input type="email" v-model="theformdata.email" id="newsletter-inp" />
                                 <button id="subscribe-btn">Subscribe</button>
                             </div>
                         </form>
@@ -67,12 +67,37 @@
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
     name: 'FooterComponent',
     data() {
         return {
+            theformdata: {
+                email: ''
+            },
             currentYear: new Date().getFullYear(),
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL,
+            errors : {}
         };
+    },
+    methods: {
+        async  submitForm() {
+        const formdata = this.theformdata 
+        const todo = await $fetch(`${this.baseURL}save-newsletter`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: formdata
+            }).then((resp) => {
+                alert('successful')
+                this.theformdata = {}
+            }).catch((error) => {
+                this.errors = error
+            })
+        },
     },
 }
 </script>

@@ -1,6 +1,30 @@
 <template>
     <!--=== Mr Eyitayo Shiyanbola (CEO/MD) ===-->
-    <div id="emmanuel-saseun" class="modal team-modal">
+    <template v-if="teams.length > 0">
+        <template v-for="(team,index) in teams" :key="index">
+            <div :id="team.name" class="modal team-modal">
+                <img :src="getPhoto(team.photo)" alt="close" class="modal-close">
+                <div class="modal-content">
+                    <div class="member-modal-wrapper">
+                        <div class="member-img-side">
+                            <img :src="getPhoto(team.photo)" :alt="team.name" class="member-img">
+                        </div>
+
+                        <div class="member-txt-side">
+                            <div class="container">
+                                <div class="member-role">{{team.position}}</div>
+                                <div class="member-name"> {{ team.name }}</div>
+                                <div class="member-desc">
+                                    {{ team.experience }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </template>
+    <!-- <div id="emmanuel-saseun" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
         <div class="modal-content">
             <div class="member-modal-wrapper">
@@ -32,9 +56,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="blessing-olalere" class="modal team-modal">
+    <!-- <div id="blessing-olalere" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
         <div class="modal-content">
             <div class="member-modal-wrapper">
@@ -169,7 +193,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <div id="mike-eko" class="modal team-modal">
         <img src="@/assets/images/close.svg" alt="close" class="modal-close">
@@ -198,13 +222,35 @@
 
 <script>
 import M from "materialize-css";
+import nuxtData from "../nuxt.config"
 
 export default {
     name: "TeamMembersModals",
     mounted() {
         const elemsModal = document.querySelectorAll('.modal');
         M.Modal.init(elemsModal);
+    },
+    updated() {
+        const elemsModal = document.querySelectorAll('.modal');
+        M.Modal.init(elemsModal);
+    },
+    data() {
+        return {
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL
+        }
+    },
+    props: {
+      teams: {
+      type: [Object, Array],
+      required: true
     }
+    },
+    methods: {
+        getPhoto (path) {
+          return this.webURL + path
+        }
+    },
 }
 </script>
 

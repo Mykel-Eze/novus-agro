@@ -8,7 +8,27 @@
                 :modules="modules" 
                 class="mySwiper"
             >
-                <swiper-slide>
+                <template v-if="banners.length > 0">
+                    <template v-for="(banner,index) in banners" :key="index">
+                        <swiper-slide>
+                            <div class="container full-height">
+                                <div class="slider-content-wrapper center">
+                                    <h1 class="slider-title">
+                                        {{ banner.title }}
+                                    </h1>
+                                    <p class="slider-text">
+                                        {{ banner.description }}
+                                    </p>
+                                    <router-link to="/contact" className="slider-btn hover-scale">
+                                        <span>Join Us</span>
+                                        <RightChevron fillColor="var(--pry-color)" />
+                                    </router-link>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </template>
+                </template>
+                <!-- <swiper-slide>
                     <div class="container full-height">
                         <div class="slider-content-wrapper center">
                             <h1 class="slider-title">
@@ -93,7 +113,7 @@
                             </router-link>
                         </div>
                     </div>
-                </swiper-slide>
+                </swiper-slide> -->
             </swiper>
         </div>
         <video autoplay loop muted>
@@ -122,6 +142,12 @@ export default {
         Swiper,
         SwiperSlide,
         RightChevron
+    },
+    props: {
+      banners: {
+      type: [Object, Array],
+      required: true
+    }
     },
     setup() {
         return {

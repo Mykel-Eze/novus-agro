@@ -6,7 +6,7 @@
                     :src="getPhoto(video.image)"
                     :alt="video.name"
                     class="gallery-photo pointer"
-                    @click="openModal('https://www.youtube.com/embed/_yTWMEChGr0?si=qDW6suGsmytnm6RO')"
+                    @click="openModal(video.name)"
                 >
             </div>
         </template>
