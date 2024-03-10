@@ -11,31 +11,31 @@
             </div>
             <div class="ca-block-wrapper" data-aos="fade-up">
                 <div class="ca-block">
-                    <template v-if="commodityAgres">
+                    <template v-if="commodityAgres.farmers_count">
                         <h2 class="ca-number"> {{ commodityAgres.farmers_count }} </h2>
                     </template>
                     <div class="ca-block-title">Farmers </div>
                 </div>
                 <div class="ca-block">
-                    <template v-if="commodityAgres">
+                    <template v-if="commodityAgres.facilitators_count">
                         <h2 class="ca-number"> {{ commodityAgres.facilitators_count }} </h2>
                     </template>
                     <div class="ca-block-title">Facilitators</div>
                 </div>
                 <div class="ca-block">
-                    <template v-if="commodityAgres">
+                    <template v-if="commodityAgres.hectares_planted_count">
                         <h2 class="ca-number">{{ commodityAgres.hectares_planted_count }}</h2>
                     </template>
                     <div class="ca-block-title">Hectares Planted</div>
                 </div>
                 <div class="ca-block">
-                    <template v-if="commodityAgres">
+                    <template v-if="commodityAgres.states_covered_count">
                         <h2 class="ca-number">{{ commodityAgres.states_covered_count }}</h2>
                     </template>
                     <div class="ca-block-title">States</div>
                 </div>
                 <div class="ca-block">
-                    <template v-if="commodityAgres">
+                    <template v-if="commodityAgres.grainpoints_hubs_count">
                         <h2 class="ca-number">{{ commodityAgres.grainpoints_hubs_count }}</h2>
                     </template>
                     <div class="ca-block-title">Grainpoint Hubs</div>
@@ -59,6 +59,9 @@ export default {
     },
     components: {},
     mounted() {
+        this.observeSection();
+    },
+    onUpdated() {
         this.observeSection();
     },
     methods: {

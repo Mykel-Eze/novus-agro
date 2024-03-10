@@ -54,6 +54,7 @@ export default {
         await $fetch(`${this.baseURL}banner`)
         .then((response) => {
             this.banners = response.response.data
+            // console.log(this.banners)
         }).catch((error) => {
             this.errors = error
         })

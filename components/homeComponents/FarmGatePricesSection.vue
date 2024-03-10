@@ -8,7 +8,21 @@
                     By Crop Per Metric Ton <span class="pry-color">(May 19, 2023)</span>
                 </h4>
                 <div class="farm-gate-price-wrapper">
-                    <FarmGatePriceBlock
+                    <template v-if="farmgateprices.length > 0">
+                        <template v-for="(farmgateprice, index) in farmgateprices" :key="index">
+                            <FarmGatePriceBlock
+                                extraClass="hibiscus-block"
+                                :itemName="farmgateprice.itemName"
+                                :itemIcon="farmgateprice.itemIcon "
+                                :itemPrice="farmgateprice.itemPrice"
+                                :itemBarWidth=getItemBarWidth(farmgateprice.itemPrice)
+                                :itemBarColor="farmgateprice.itemBarColor"
+                                :itemBarBorderColor="farmgateprice.itemBarBorderColor"
+                                :highestprice="highestFarmGatePrice"
+                            />
+                        </template>
+                    </template>
+                    <!-- <FarmGatePriceBlock
                         extraClass="hibiscus-block"
                         itemName="Hibiscus"
                         itemIcon="hibiscus.png"
@@ -56,7 +70,7 @@
                         itemPrice="247,233"
                         itemBarColor="rgba(144, 12, 63, 0.4)"
                         itemBarBorderColor="rgb(144, 12, 63)"
-                    />
+                    /> -->
                 </div>
             </div>
         </div>
@@ -66,11 +80,69 @@
 
 <script>
 import FarmGatePriceBlock from './FarmGatePriceBlock.vue'
+import nuxtData from "../nuxt.config"
 
 export default {
     name: "FarmGatePricesSection",
+    data () {
+        return{
+            baseURL: nuxtData.runtimeConfig.public.baseURL,
+            webURL: nuxtData.runtimeConfig.public.webURL,
+            errors: {},
+            farmgateprices: {}
+        }
+    },
     components: { 
         FarmGatePriceBlock
+    },
+    methods: {
+        async getFarmGatePrices () {
+            await $fetch(`${this.baseURL}farmgateprice`)
+            .then((response) => {
+                this.farmgateprices = response.response.data
+            }).catch((error) => {
+            this.errors = error
+            })
+        },
+        getItemBarWidth(price){
+
+            if(price == this.highestFarmGatePrice ){
+                return "100%"
+            }else{
+                return '';
+            }
+            
+        }
+    },
+    computed: {
+        highestFarmGatePrice: function () {
+
+            // Check if the array is not empty
+            if (this.farmgateprices.length === 0) {
+                return null; // or any default value you prefer for an empty array
+            }
+
+            // Initialize the highest price with the first item's price
+            let highestPrice = this.farmgateprices[0].itemPrice;
+
+            // Loop through the array to find the highest price
+            for (let i = 1; i < this.farmgateprices.length; i++) {
+                const currentItemPrice = this.farmgateprices[i].itemPrice;
+
+                // Check if the current item's price is higher than the stored highest price
+                if (currentItemPrice > highestPrice) {
+                highestPrice = currentItemPrice;
+                }
+            }
+
+            return highestPrice;
+
+        }
+    },
+    mounted() {
+
+        this.getFarmGatePrices();
+
     },
 }
 </script>

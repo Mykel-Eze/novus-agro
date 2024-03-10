@@ -10,7 +10,7 @@
             >
                 <template v-if="banners.length > 0">
                     <template v-for="(banner,index) in banners" :key="index">
-                        <swiper-slide>
+                        <swiper-slide >
                             <div class="container full-height">
                                 <div class="slider-content-wrapper center">
                                     <h1 class="slider-title">
@@ -150,6 +150,11 @@ export default {
     }
     },
     setup() {
+        return {
+            modules: [ Pagination, Navigation ],
+        };
+    },
+    updated() {
         return {
             modules: [ Pagination, Navigation ],
         };
