@@ -67,10 +67,9 @@ export default {
     },
     methods: {
     async getSingleBlog () {
-        await $fetch(`${this.baseURL}blog/${this.slug}`)
+        await $fetch(`${this.baseURL}/blog/${this.slug}`)
         .then((response) => {
             this.blogData = response.response.data
-            console.log(this.blogData)
         }).catch((error) => {
         this.errors = error
         })

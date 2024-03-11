@@ -1,6 +1,6 @@
 <template>
   <!-- <router-link :to="blogLink" class="blog-card" data-aos="fade-up"> -->
-  <router-link :to="`/blog/${blogSlug}`" class="blog-card" data-aos="fade-up">
+  <router-link :to="`/blog/${blogSlug}`" class="blog-card" data-aos="fade-up">   
     <div class="blog-card-img-wrapper">
         <img :src="getImageSrc(blogImg)" :alt="blogTitle" class="blog-card-img">
     </div>
@@ -14,11 +14,13 @@
 </template>
 
 <script>
+import nuxtData from "../nuxt.config"
+
 export default {
     name: "BlogCard",
     data () {
         return {
-            webURL : 'http://127.0.0.1:8000'
+            webURL: nuxtData.runtimeConfig.public.webURL,
         }
     },
     props: {

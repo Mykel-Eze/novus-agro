@@ -9,7 +9,7 @@
                             :blogImg="blog.image"
                             :blogTitle="blog.title" 
                             :blogSlug="blog.slug" 
-                            :blogLink="`blog/${blog.slug}`" 
+                            :blogLink="`/blog/${blog.slug}`" 
                             :blogText="formatDescription(blog.description, 150)"
                         />
                     </template>
