@@ -16,7 +16,7 @@ export default {
     name: 'FarmGatePriceBlock',
     data () {
         return {
-            highestItemPrice: 1282220
+            highestItemPrice: 5625
         }
     },
     props: {
