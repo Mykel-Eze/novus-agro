@@ -3,13 +3,12 @@
     <template v-if="teams.length > 0">
         <template v-for="(team,index) in teams" :key="index">
             <div :id="team.name" class="modal team-modal">
-                <img :src="getPhoto(team.photo)" alt="close" class="modal-close">
+                <img src="@/assets/images/close.svg" alt="close" class="modal-close">
                 <div class="modal-content">
                     <div class="member-modal-wrapper">
                         <div class="member-img-side">
                             <img :src="getPhoto(team.photo)" :alt="team.name" class="member-img">
                         </div>
-
                         <div class="member-txt-side">
                             <div class="container">
                                 <div class="member-role">{{team.position}}</div>
