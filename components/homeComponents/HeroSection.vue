@@ -9,8 +9,8 @@
                 class="mySwiper"
             >
                 <template v-if="banners.length > 0">
-                    <template v-for="(banner,index) in banners" :key="index">
-                        <swiper-slide >
+                    <!-- <template v-for="(banner,index) in banners" :key="index"> -->
+                        <swiper-slide v-for="(banner,index) in banners" :key="index">
                             <div class="container full-height">
                                 <div class="slider-content-wrapper center">
                                     <h1 class="slider-title">
@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         </swiper-slide>
-                    </template>
+                    <!-- </template> -->
                 </template>
                 <!-- <swiper-slide>
                     <div class="container full-height">

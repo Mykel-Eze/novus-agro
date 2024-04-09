@@ -4,9 +4,11 @@
         <div class="container">
             <div class="farm-gate-content-wrapper">
                 <h2 class="section-title center">Farm Gate Prices</h2>
-                <h4 class="section-sub-title center">
-                    By Crop Per Metric Ton <span class="pry-color">(May 19, 2023)</span>
-                </h4>
+                <template v-if="farmgatepricetitle">
+                    <h4 class="section-sub-title center">
+                        {{farmgatepricetitle.title}} <span class="pry-color">( {{ getMonthName(farmgatepricetitle.from_date)  }}  {{ getDayNumber(farmgatepricetitle.from_date) }} - {{ getMonthName(farmgatepricetitle.to_date) }} {{ getDayNumber(farmgatepricetitle.to_date) }} , {{ farmgatepricetitle.year }} )</span>
+                    </h4>
+                </template>
                 <div class="farm-gate-price-wrapper">
                     <template v-if="farmgateprices.length > 0">
                         <template v-for="(farmgateprice, index) in farmgateprices" :key="index">
@@ -89,7 +91,10 @@ export default {
             baseURL: nuxtData.runtimeConfig.public.baseURL,
             webURL: nuxtData.runtimeConfig.public.webURL,
             errors: {},
-            farmgateprices: {}
+            farmgateprices: {},
+            farmgatepricetitle: {},
+            months : ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"],
         }
     },
     components: { 
@@ -104,24 +109,38 @@ export default {
             this.errors = error
             })
         },
+        async getFarmGatePriceTitle () {
+            await $fetch(`${this.baseURL}farmgatepricetitle`)
+            .then((response) => {
+                this.farmgatepricetitle = response.response.data
+                console.log(this.farmgatepricetitle)
+            })
+            .catch((error) => {
+                this.errors = error
+            })
+        },
         getItemBarWidth(price){
-
             if(price == this.highestFarmGatePrice ){
                 return "100%"
             }else{
                 return '';
             }
-            
-        }
+        },
+        getMonthName(thedate){
+            const dt = new Date(thedate);
+            return this.months[dt.getMonth()]
+        },
+        getDayNumber(thedate){
+            const dt = new Date(thedate);
+            return dt.getDate();
+        },
     },
     computed: {
         highestFarmGatePrice: function () {
-
             // Check if the array is not empty
             if (this.farmgateprices.length === 0) {
                 return null; // or any default value you prefer for an empty array
             }
-
             // Initialize the highest price with the first item's price
             let highestPrice = this.farmgateprices[0].itemPrice;
 
@@ -134,14 +153,13 @@ export default {
                 highestPrice = currentItemPrice;
                 }
             }
-
             return highestPrice;
-
         }
     },
     mounted() {
 
         this.getFarmGatePrices();
+        this.getFarmGatePriceTitle();
 
     },
 }
