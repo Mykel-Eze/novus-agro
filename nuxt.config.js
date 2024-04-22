@@ -65,10 +65,10 @@ export default {
   // },
   runtimeConfig: {
     public: {
-      // baseURL: 'https://website.grainpoint.com.ng/api/',
-      // webURL: 'https://website.grainpoint.com.ng/',
-      baseURL: 'http://127.0.0.1:8000/api/',
-      webURL: 'http://127.0.0.1:8000',
+      baseURL: 'https://website.grainpoint.com.ng/api/',
+      webURL: 'https://website.grainpoint.com.ng/',
+      // baseURL: 'http://127.0.0.1:8000/api/',
+      // webURL: 'http://127.0.0.1:8000',
     },
   },
 }
